@@ -367,7 +367,7 @@ function buildOptions (_options) {
     defaultOptions.storageBackendOptions,
     options.storageBackendOptions)
 
-    if(indexedDB) {
+    if(!indexedDB) {
       options.db = require('memdown')
     }
 
